@@ -1,10 +1,25 @@
-# Changelog — Dimacs2021 BKS
+# Changelog: Dimacs2021 benchmark family
+
+All notable changes to the Dimacs2021 family are recorded here. The first entry records the creation of this repository. The section after it holds the changelog that the family had in the main MAMUT-routing repository. It keeps every entry, fact, date, count and commit reference, with the wording edited for style and the headings moved 2 levels down.
+
+## 2026-11: family repository
+
+- The family, tracked until now directly in the main MAMUT-routing repository, becomes the repository `MAMUT-routing-Dimacs2021`, mounted in MAMUT-routing at `benchmarks/Dimacs2021`. Its history is extracted from the history of the main repository, under the directory of its problem type. `history/` holds the map from the former to the new commit identifiers.
+- Instances and best-known solutions keep their former path after the problem type, for example `VRPTW/n=1000/C1_10_10.vrp.json`.
+- No data changes. No instance, no best-known solution and no instance identifier changed. Only the location changed.
+- `mamut-collection.json` at the root marks the repository as a family collection (`"layout_version": 2`).
+- This layout is read by `mamut-routing-lib` 0.13 and later, which is in development and not released yet. `mamut-routing-lib` 0.12 and earlier read the former layout, which stays available read-only in the archive of the former main repository, `MAMUT-routing-archive-2026-11`.
+- The README, LICENSE and CHANGELOG files move from `VRPTW/` to the root, and CITATION.cff and NOTICE files are added. LICENSE now contains the MIT License text that it refers to.
+
+## Former VRPTW directory of the main repository
+
+### Changelog of the Dimacs2021 BKS
 
 All notable changes to the curated `Dimacs2021` best-known solutions (BKS) are recorded here. Objective: **mono-cost** (minimize total cost only). Distances use the DIMACS-2021 metric: each arc cost is `floor(10 × d)` with `d` the Euclidean distance of the original Solomon / Gehring-Homberger coordinates (which the instance files store unscaled), and time windows and service times are ×10, so costs are exact integers and comparisons are exact. Because the stored coordinates do not define the costs, only the explicit-matrix `.vrp` export is faithful for this family.
 
-## 2026-06-15
+#### 2026-06-15
 
-Re-scraped the [SINTEF TOP VRPTW website](https://www.sintef.no/projectweb/top/vrptw/) and **re-evaluated the SINTEF hierarchical solutions under the Dimacs2021 metric** (coordinates ×10, truncated integer distances). Although these solutions are optimized for SINTEF's hierarchical objective, several of them — once measured by the DIMACS integer cost — turn out to be cheaper than our pyvrp/HGS mono-cost BKS. They were adopted only where strictly better. All improvements are at `n=1000`, keep the same fleet size, and lower the integer cost:
+Re-scraped the [SINTEF TOP VRPTW website](https://www.sintef.no/projectweb/top/vrptw/) and **re-evaluated the SINTEF hierarchical solutions under the Dimacs2021 metric** (coordinates ×10, truncated integer distances). Although these solutions are optimized for SINTEF's hierarchical objective, several of them turn out to be cheaper than our pyvrp/HGS mono-cost BKS once measured by the DIMACS integer cost. They were adopted only where strictly better. All improvements are at `n=1000`, keep the same fleet size, and lower the integer cost:
 
 | Instance | n | Vehicles | Cost (before → after) | Δ | Δ% |
 |---|---:|---:|---|---:|---:|
@@ -26,6 +41,6 @@ Re-scraped the [SINTEF TOP VRPTW website](https://www.sintef.no/projectweb/top/v
 
 Total cost reduction: **−3412** across 15 instances. Margins are small (all < 0.16 %) but exact: each is a strict integer improvement under the DIMACS metric. Solutions were validated with `mamut-routing-lib` (`check_solution`, including time-window feasibility under the integer metric) and adopted only when strictly better (`is_better_solution`).
 
-### Metadata
+##### Metadata
 
 - Removed the non-portable `source_path` field from every `Dimacs2021` BKS. It referenced a path inside the (not-yet-public) scraping repository and carried no value for downstream users. Provenance is still captured by `source`, `authors`, `date`, and `notes`.
