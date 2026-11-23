@@ -93,7 +93,7 @@
         [984, 37, 720, 535, 17, 975, 359, 809, 83, 288, 244],
         [1000, 563, 748, 259, 62, 525, 331, 424, 836, 92, 452, 392, 586]
     ],
-    "cost": 473616,
+    "cost": 473616.0,
     "metadata": {
         "source": "sintef",
         "status": "heuristic",
@@ -103,8 +103,29 @@
         "reference": "\"New methods of VRP problem optimization\", unpublished research funded by The National Centre for Research and Development.  \"New methods of VRP problem optimization\", project number: POIR.01.01.01.-00-0222/16.",
         "notes": "SINTEF-2008 (hierarchical) solution re-evaluated under the Dimacs2021 metric (coords x10, truncated integer distances).",
         "authors": "Piotr Sielski (piotr.sielski@wmii.uni.lodz.pl), Piotr Cybula, Marek Rogalski (marek.rogalski@wmii.uni.lodz.pl), Mariusz Kok, Piotr Beling, Andrzej Jaszkiewicz, Przemys\u00c5\u0082aw Pe\u00c5\u0082ka.  Emapa S.A. (http://www.emapa.pl).",
-        "validated_cost": 473616,
-        "validated_num_routes": 91
+        "validated_cost": 473616.0,
+        "validated_num_routes": 91,
+        "standard": {
+            "profile": "binary64-exact-v1",
+            "objective": "MonoCost",
+            "num_routes": 91,
+            "routes_sha256": "0fee8568798d4119d02e486705816b2a47a5c3cb0a083b91f11125bbd5a30d53",
+            "authoritative_cost": {
+                "numerator": "473616",
+                "denominator": "1"
+            },
+            "display_overflow": false,
+            "evaluation": {
+                "checker": "mamut-routing-lib",
+                "backend": "cpp-dyadic-prepared",
+                "implementation_sha256": "93280715da2a0e48789e5e4b3caef287f5214a05e5344e6416c52bc32d38c1d3",
+                "runtime": "CPython 3.12.12",
+                "verification_status": "incumbent-verified"
+            },
+            "specification": "mamut-routing/0.1-review",
+            "benchmark_revision": "r1",
+            "manifest_sha256": "97ff2228b82773a1286f0a026c631fd3b21ed1f4d78d87ad0f9fd41b0a7bdcad"
+        }
     },
     "objective_function": "MonoCost"
 }

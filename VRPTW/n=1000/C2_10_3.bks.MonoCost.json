@@ -32,13 +32,34 @@
         [859, 346, 180, 41, 944, 37, 656, 116, 214, 806, 839, 961, 552, 3, 705, 243, 55, 860, 595, 544, 161, 828, 440, 272, 564, 100, 812, 378, 618, 716, 50, 565, 399, 925, 256, 997, 945],
         [865, 911, 829, 804, 473, 613, 540, 891, 397, 535, 220, 401, 142, 713, 567, 872, 194, 648, 973, 668, 755, 332, 202, 35, 671, 959, 478]
     ],
-    "cost": 160365,
+    "cost": 160365.0,
     "metadata": {
         "cost": 16036.5,
         "source": "pyvrp",
         "status": "heuristic",
         "validated_cost": 160365.0,
-        "validated_num_vehicles": 30
+        "validated_num_vehicles": 30,
+        "standard": {
+            "profile": "binary64-exact-v1",
+            "objective": "MonoCost",
+            "num_routes": 30,
+            "routes_sha256": "15240281643f078a5c6fb1b0b0dbbf74e51bf3904eaa11677ff7b307d637ae8b",
+            "authoritative_cost": {
+                "numerator": "160365",
+                "denominator": "1"
+            },
+            "display_overflow": false,
+            "evaluation": {
+                "checker": "mamut-routing-lib",
+                "backend": "cpp-dyadic-prepared",
+                "implementation_sha256": "93280715da2a0e48789e5e4b3caef287f5214a05e5344e6416c52bc32d38c1d3",
+                "runtime": "CPython 3.12.12",
+                "verification_status": "incumbent-verified"
+            },
+            "specification": "mamut-routing/0.1-review",
+            "benchmark_revision": "r1",
+            "manifest_sha256": "4cf2fa6c3e4e7ae60a76117fe2bb51d3d25cc5aaa317890b2bdc8e55aba80769"
+        }
     },
     "objective_function": "MonoCost"
 }

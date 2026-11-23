@@ -60,7 +60,7 @@
         [584, 301, 55, 334, 344, 142, 372, 11],
         [598, 535, 27, 453, 431, 492, 284, 52, 85, 286, 553, 137, 169]
     ],
-    "cost": 212742,
+    "cost": 212742.0,
     "metadata": {
         "cost": 21274.2,
         "source": "cvrplib",
@@ -68,8 +68,29 @@
         "provided_date": "2025-12-21",
         "notes": "BKS provided by email from Dr. Eduardo Queiroga on behalf of CVRPLIB",
         "status": "heuristic",
-        "validated_cost": 212742,
-        "validated_num_vehicles": 58
+        "validated_cost": 212742.0,
+        "validated_num_vehicles": 58,
+        "standard": {
+            "profile": "binary64-exact-v1",
+            "objective": "MonoCost",
+            "num_routes": 58,
+            "routes_sha256": "641a265e8abdf402e0536fe8e422bb494f05a6943c0c03fa5085dd8e01eda6e1",
+            "authoritative_cost": {
+                "numerator": "212742",
+                "denominator": "1"
+            },
+            "display_overflow": false,
+            "evaluation": {
+                "checker": "mamut-routing-lib",
+                "backend": "cpp-dyadic-prepared",
+                "implementation_sha256": "93280715da2a0e48789e5e4b3caef287f5214a05e5344e6416c52bc32d38c1d3",
+                "runtime": "CPython 3.12.12",
+                "verification_status": "incumbent-verified"
+            },
+            "specification": "mamut-routing/0.1-review",
+            "benchmark_revision": "r1",
+            "manifest_sha256": "a0ad9f469ddebcc1d55b9a11e88f66e1e50e23508df7c3ec74589819bf235067"
+        }
     },
     "objective_function": "MonoCost"
 }

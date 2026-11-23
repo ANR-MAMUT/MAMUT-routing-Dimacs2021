@@ -62,7 +62,7 @@
         [598, 158, 75, 282, 127, 33, 562, 56, 334],
         [600, 367, 250, 21, 99, 320, 579, 252, 289]
     ],
-    "cost": 140668,
+    "cost": 140668.0,
     "metadata": {
         "source": "pyvrp",
         "is_feasible": true,
@@ -71,8 +71,29 @@
         "date": "2025-12-21 23:57:36",
         "notes": "Solved with PyVRP's HGS",
         "authors": "Florian Rascoussier (0nyr), using [PyVRP](https://github.com/PyVRP/PyVRP) by Niels Wouda, Leon Lan, Wouter Kool, Joop van der Heiden, Pat Mullee, and Patrick Klein",
-        "validated_cost": 140668,
-        "validated_num_vehicles": 60
+        "validated_cost": 140668.0,
+        "validated_num_vehicles": 60,
+        "standard": {
+            "profile": "binary64-exact-v1",
+            "objective": "MonoCost",
+            "num_routes": 60,
+            "routes_sha256": "5236659555c32492a79d889d8ee87091abacb4676e1c16e2f33585c771b9b769",
+            "authoritative_cost": {
+                "numerator": "140668",
+                "denominator": "1"
+            },
+            "display_overflow": false,
+            "evaluation": {
+                "checker": "mamut-routing-lib",
+                "backend": "cpp-dyadic-prepared",
+                "implementation_sha256": "93280715da2a0e48789e5e4b3caef287f5214a05e5344e6416c52bc32d38c1d3",
+                "runtime": "CPython 3.12.12",
+                "verification_status": "incumbent-verified"
+            },
+            "specification": "mamut-routing/0.1-review",
+            "benchmark_revision": "r1",
+            "manifest_sha256": "aef4d7e0467a17c56284af356b64b57d83ad69afce9b569274a0fb328c3bc925"
+        }
     },
     "objective_function": "MonoCost"
 }

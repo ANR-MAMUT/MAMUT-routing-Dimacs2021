@@ -6,7 +6,7 @@
         [131, 179, 62, 74, 192, 33, 94, 149, 134, 188, 177, 97, 35, 28, 162, 117, 137, 81, 175, 172, 37, 140, 139, 29, 88, 103, 129, 9, 19, 65, 47, 116, 56, 158, 36, 190, 106, 108, 76, 182, 100, 54, 104, 2, 63, 82, 34],
         [164, 171, 53, 169, 154, 174, 89, 58, 150, 166, 157, 90, 26, 50, 84, 141, 161, 11, 64, 66, 142, 123, 10, 130, 198, 93, 105, 176, 91, 126, 79, 17, 133, 16, 73, 153, 180, 85, 14, 98, 46, 121, 189, 83, 20, 30, 170, 135, 109, 12, 110, 3, 4, 165, 87, 113, 25, 70, 163, 148]
     ],
-    "cost": 18424,
+    "cost": 18424.0,
     "metadata": {
         "source": "pyvrp",
         "is_feasible": true,
@@ -15,8 +15,29 @@
         "date": "2025-12-21 22:52:32",
         "notes": "Solved with PyVRP's HGS",
         "authors": "Florian Rascoussier (0nyr), using [PyVRP](https://github.com/PyVRP/PyVRP) by Niels Wouda, Leon Lan, Wouter Kool, Joop van der Heiden, Pat Mullee, and Patrick Klein",
-        "validated_cost": 18424,
-        "validated_num_vehicles": 4
+        "validated_cost": 18424.0,
+        "validated_num_vehicles": 4,
+        "standard": {
+            "profile": "binary64-exact-v1",
+            "objective": "MonoCost",
+            "num_routes": 4,
+            "routes_sha256": "72d20d00c2f8f519cc7d71538186b8f82fc91575b51f5e2bf0f575502dec2d26",
+            "authoritative_cost": {
+                "numerator": "18424",
+                "denominator": "1"
+            },
+            "display_overflow": false,
+            "evaluation": {
+                "checker": "mamut-routing-lib",
+                "backend": "cpp-dyadic-prepared",
+                "implementation_sha256": "93280715da2a0e48789e5e4b3caef287f5214a05e5344e6416c52bc32d38c1d3",
+                "runtime": "CPython 3.12.12",
+                "verification_status": "incumbent-verified"
+            },
+            "specification": "mamut-routing/0.1-review",
+            "benchmark_revision": "r1",
+            "manifest_sha256": "2b868cb265329bcd0049d1805e036e0eeb86064f7390ef5479930c015265bcfd"
+        }
     },
     "objective_function": "MonoCost"
 }

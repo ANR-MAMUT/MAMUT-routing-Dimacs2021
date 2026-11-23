@@ -92,7 +92,7 @@
         [989, 738, 494, 556, 992, 655, 178, 87, 11],
         [991, 407, 244, 610, 65, 374, 868, 161, 484, 547, 744, 427]
     ],
-    "cost": 413503,
+    "cost": 413503.0,
     "metadata": {
         "source": "sintef",
         "status": "heuristic",
@@ -102,8 +102,29 @@
         "reference": "Nvidia",
         "notes": "SINTEF-2008 (hierarchical) solution re-evaluated under the Dimacs2021 metric (coords x10, truncated integer distances).",
         "authors": "Piotr Sielski, Akif Corduk, Nicolas Blin, Hugo Linsenmaier, Alex Fender, Rajesh Gandham",
-        "validated_cost": 413503,
-        "validated_num_routes": 90
+        "validated_cost": 413503.0,
+        "validated_num_routes": 90,
+        "standard": {
+            "profile": "binary64-exact-v1",
+            "objective": "MonoCost",
+            "num_routes": 90,
+            "routes_sha256": "d4ab8c5bf0ad2b262de8e8fc65ca3bf889689ecd6250625844e5d5e540c4894d",
+            "authoritative_cost": {
+                "numerator": "413503",
+                "denominator": "1"
+            },
+            "display_overflow": false,
+            "evaluation": {
+                "checker": "mamut-routing-lib",
+                "backend": "cpp-dyadic-prepared",
+                "implementation_sha256": "93280715da2a0e48789e5e4b3caef287f5214a05e5344e6416c52bc32d38c1d3",
+                "runtime": "CPython 3.12.12",
+                "verification_status": "incumbent-verified"
+            },
+            "specification": "mamut-routing/0.1-review",
+            "benchmark_revision": "r1",
+            "manifest_sha256": "3e284853f81d311a5806efb2e8e2fcbe13c029be434e7e2018c21b354d92781c"
+        }
     },
     "objective_function": "MonoCost"
 }
