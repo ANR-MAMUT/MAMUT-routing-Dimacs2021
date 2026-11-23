@@ -1,0 +1,30 @@
+{
+  "benchmark_revision": "r1",
+  "cost_is_travel_time": true,
+  "default_profile": "binary64-exact-v1",
+  "family": "Dimacs2021",
+  "features": [
+    "single-depot",
+    "homogeneous-capacity",
+    "mandatory-visits",
+    "service-start-windows"
+  ],
+  "instance": {
+    "path": "VRPTW/n=25/RC206.vrp.json",
+    "sha256": "88fad958c89588cb9d5d6146b1fb57daf4b6ff683bf6ec12ab9d52b420ee2b85"
+  },
+  "instance_name": "RC206",
+  "materialization": {
+    "interpretation": "binary64",
+    "kind": "embedded-matrix",
+    "matrix_sha256": "17de0bdad5c68a3df83b1ca3dc6b8d7071ebfa71dc70aa7a26fb3dd6ac48f4dd"
+  },
+  "objective": "MonoCost",
+  "problem": "VRPTW",
+  "sidecars": [],
+  "specification": "mamut-routing/0.1-review",
+  "units": {
+    "cost": "one tenth of a Solomon/Homberger benchmark unit",
+    "time": "one tenth of a Solomon/Homberger benchmark unit"
+  }
+}
